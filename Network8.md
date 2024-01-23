@@ -9,17 +9,17 @@
 보내려는 총 데이터 : 4800 byte
 MTU : 1500 byte
 
-보내는 패킷의 수 : 4
-첫번째 패킷의 데이터 : 1480 byte
+보내는 패킷의 수 : 4\
+첫번째 패킷의 데이터 : 1480 byte\
 마지막 패킷의 데이터 : 360 byte
 
-첫번째, 두번째, 세번째 패킷 
--> IPv4 헤더(20 byte) + 데이터(1480 byte) => 1500 byte
-MTU 통과 후 Ethernet(14 byte) 붙어서 1514 byte
+### 첫번째, 두번째, 세번째 패킷
+>-> IPv4 헤더(20 byte) + 데이터(1480 byte) => 1500 byte\
+MTU 통과 후 Ethernet(14 byte) 붙어서 **1514 byte**
 
-마지막 패킷
--> IPv4 헤더(20 byte) + ICMP 요청(8 byte) + 데이터(360 byte) => 388 byte
-MTU 통과 후 Ethernet(14 byte) 붙어서 402 byte
+### 마지막 패킷
+>-> IPv4 헤더(20 byte) + ICMP 요청(8 byte) + 데이터(360 byte) => 388 byte\
+MTU 통과 후 Ethernet(14 byte) 붙어서 **402 byte**
 
->## 결론
-> 4800 byte의 데이터는 1514byte, 1514byte, 1514byte, 402byte로 조각화되어 전송된다.
+## 결론
+ 4800 byte의 데이터는 1514byte, 1514byte, 1514byte, 402byte로 **조각화되어 전송된다.**
